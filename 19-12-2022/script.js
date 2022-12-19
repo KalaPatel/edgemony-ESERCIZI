@@ -112,7 +112,6 @@ switch (mathOperator) {
         " non disponinile. Ricaricare la pagina e una delle seguenti operazioni: addizione (+), sottrazione(-), moltiplicazione(*) o divisione(/)."
     );
 }
-
 mathOperator == "addizione"
   ? console.log(intFirstNumberPic + intSecondNumberPic)
   : console.log("Sono programmato solamente per svolgere addizioni");
