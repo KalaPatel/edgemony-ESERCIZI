@@ -8,7 +8,11 @@ let intFirstNumberPic = parseInt(firstNumberPick);
 
 let intSecondNumberPic = parseInt(secondNumberPick);
 
-if (mathOperator == "addizione" || mathOperator == "+") {
+if (
+  mathOperator == "addizione" ||
+  mathOperator == "Addizione" ||
+  mathOperator == "+"
+) {
   console.log(
     "La somma di " +
       firstNumberPick +
@@ -17,7 +21,11 @@ if (mathOperator == "addizione" || mathOperator == "+") {
       " è: " +
       (intFirstNumberPic + intSecondNumberPic)
   );
-} else if (mathOperator == "sottrazione" || mathOperator == "-") {
+} else if (
+  mathOperator == "sottrazione" ||
+  mathOperator == "Sottrazione" ||
+  mathOperator == "-"
+) {
   console.log(
     "La sottrazione di " +
       firstNumberPick +
@@ -26,7 +34,11 @@ if (mathOperator == "addizione" || mathOperator == "+") {
       " è: " +
       (intFirstNumberPic - intSecondNumberPic)
   );
-} else if (mathOperator == "moltiplicazione" || mathOperator == "*") {
+} else if (
+  mathOperator == "moltiplicazione" ||
+  mathOperator == "Moltiplicazione" ||
+  mathOperator == "*"
+) {
   console.log(
     "Il prodotto di " +
       firstNumberPick +
@@ -35,7 +47,11 @@ if (mathOperator == "addizione" || mathOperator == "+") {
       " è: " +
       intFirstNumberPic * intSecondNumberPic
   );
-} else if (mathOperator == "divisione" || mathOperator == "/") {
+} else if (
+  mathOperator == "divisione" ||
+  mathOperator == "Divisione" ||
+  mathOperator == "/"
+) {
   console.log(
     "Il quoziente di " +
       firstNumberPick +
@@ -56,10 +72,16 @@ switch (mathOperator) {
   case "addizione":
     console.log(intFirstNumberPic + intSecondNumberPic);
     break;
+  case "Addizione":
+    console.log(intFirstNumberPic + intSecondNumberPic);
+    break;
   case "+":
     console.log(intFirstNumberPic + intSecondNumberPic);
     break;
   case "sottrazione":
+    console.log(intFirstNumberPic - intSecondNumberPic);
+    break;
+  case "Sottrazione":
     console.log(intFirstNumberPic - intSecondNumberPic);
     break;
   case "-":
@@ -68,10 +90,16 @@ switch (mathOperator) {
   case "moltiplicazione":
     console.log(intFirstNumberPic * intSecondNumberPic);
     break;
+  case "Moltiplicazione":
+    console.log(intFirstNumberPic * intSecondNumberPic);
+    break;
   case "*":
     console.log(intFirstNumberPic * intSecondNumberPic);
     break;
   case "divisione":
+    console.log(intFirstNumberPic / intSecondNumberPic);
+    break;
+  case "Divisione":
     console.log(intFirstNumberPic / intSecondNumberPic);
     break;
   case "/":
