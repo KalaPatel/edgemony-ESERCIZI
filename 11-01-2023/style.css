@@ -1,0 +1,39 @@
+.cardColorChange {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cardText {
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 0.5px solid #890909;
+  border-radius: 8px;
+  justify-content: space-around;
+}
+
+.card p {
+  margin: 0;
+}
+
+.author {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.btnCard {
+  background-color: rgba(218, 79, 79, 0.866);
+  border: none;
+  color: white;
+}
+
+.quote-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
