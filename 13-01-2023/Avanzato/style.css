@@ -1,0 +1,58 @@
+body {
+  background-image: url("./img/sfondo1.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel {
+  display: flex;
+  width: 75%;
+  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #052944a3;
+  background-color: #135e9787;
+  border-radius: 8px;
+  backdrop-filter: invert(80%);
+  gap: 30px;
+}
+
+.carousel__img {
+  width: 250px;
+  object-fit: cover;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
+}
+
+.switcher {
+  display: flex;
+  gap: 15px;
+}
+
+.left_circle,
+.center_circle,
+.right_circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  box-shadow: 0 0 2px #c79323;
+  cursor: pointer;
+  background-color: rgba(249, 240, 222, 0.878);
+}
+
+@media screen and (min-width: 768px) {
+  .carousel__img {
+    width: 360px;
+  }
+}
+
+.carousel {
+  height: 75%;
+  width: 70%;
+}
