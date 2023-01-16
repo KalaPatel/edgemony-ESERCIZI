@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcbf4d8c;
+}
+
+.loadingBtn {
+  margin: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #000000c7;
+  font-size: 1rem;
+}
+
+.cardBox {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  box-shadow: 0 0 5px #855907c7;
+  border-radius: 8px;
+  justify-content: space-around;
+  font-family: "Bitter", serif;
+}
+
+.product_title {
+  font-size: 1rem;
+}
+
+.img-box {
+  width: 180px;
+  position: relative;
+}
+
+.product_price {
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  background: gold;
+  border-radius: 2px;
+  padding: 2px;
+  color: white;
+  font-weight: bold;
+}
+
+.imgCard {
+  box-shadow: 0 0 2px #855907c7;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product_description {
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
