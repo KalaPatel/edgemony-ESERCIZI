@@ -106,6 +106,7 @@ section {
 }
 
 .switcher{
+  margin-top: 5px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -139,7 +140,7 @@ section {
 .cardBox {
   display: flex;
   justify-content: center;
-  margin: 40px;
+  margin-top: 20px;
   flex-wrap: wrap;
   gap: 20px;
 }
