@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    
+    <script src="./form.js" type="module"></script>
+  
+  </head>
+  <body>
+<header>
+  <h1 class="brandName"> 
+    <a href="./index.html">SHIRTY</a>
+  </h1>
+  <div class="hamburger_container">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+<div class="side_nav"></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero_img">
+<img id="img1" src="./img/hero1.jpg" alt="">
+<img id="img2" class="show" src="./img/hero2.jpg" alt="">
+<img id="img3" src="./img/hero3.jpg" alt="">
+</div>
+</section>
+
+<section class="formsBox">
+  <form id="formAddProducts">
+  <h1 class="form_info">Compila il form e valuteremo la tua richiesta!</h1>
+  <div class="first_row">
+  <div class="string-input">
+  <label for="title">Nome prodotto:</label>
+  <input type="text" name="title" id="title" required>
+  <label for="image">Immagine:</label>
+  <input type="url" name="image" id="image" required>
+</div>
+<div class="number-input">
+  <label for="price">Prezzo:</label>
+  <input  type="number" name="price" id="price"required>
+  <label for="category">Categoria: </label>
+  <input  type="number" name="category" id="category" required>
+</div>
+</div>
+<div class="second_row">
+<label for="description">Destrizione del prodotto:</label>
+  <textarea name="description" id="description" cols="34" rows="5"></textarea>
+  <input class= "send_btn" type="submit" value="INVIA">
+</div>
+</form>
+<form id="formAddCategory">
+  <h1 class="form_info">Non trovi una categoria adatta per il tuo prodotto? Creala!</h1>
+  <label for="categoryName">Nome categoria:</label>
+  <input type="text" name="categoryName" id="categoryName" required>
+  <label for="categoryImage">Immagine:</label>
+  <input type="url" name="categoryImage" id="categoryImage" required>
+  <input class= "send_btn" type="submit" value="INVIA">
+</form>
+</section>
+
+
+</main>
+  </body>
+</html>
