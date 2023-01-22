@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+ background-image: url(./img/sfondo1.jpg);
+ backdrop-filter: blur(8px);
+}
+
+header{
+  position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Dosis", sans-serif;
+  justify-content: space-between;
+}
+
+header .brandName{
+  font-size: 3.5rem;
+  text-shadow: 1px 4px 5px #050101;
+  color: white;
+}
+
+.hamburger_container{
+  padding: 3px;
+  position: relative; 
+  display: flex;
+  align-items: center;
+ gap: 20px;
+}
+
+ a:link, a:visited, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger_container a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header .hamburger { 
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+header .hamburger:hover{
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+header .hamburger .line {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.item_qty{
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+height: 15px;
+width: 15px;
+border-radius: 50%;
+background-color:  #dd120f;
+top: 0;
+right: 0;
+}
+
+.counter{
+  font-weight: bold;
+  color: white;
+  font-size: 0.8rem;
+}
+
+header .side_nav {
+  display: flex;
+ flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 10px 10px #000;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  right: 5px;
+  top: 50px;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.35s;
+  padding: 15px;
+}
+
+.totalPriceContainer{
+  align-self: flex-end;
+  width: 100%;
+}
+
+.cart__Elements{
+  font-weight: bold;
+}
+
+.totalText{
+  color: #710605;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.totalPrice{
+  text-align: right;
+}
+
+.cartInfoBox{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 5px;
+}
+
+.productCartInfo{
+  display: flex;
+  font-weight: normal;
+  flex-direction: column;
+}
+
+.cartBtn{
+  display: flex;
+  gap: 5px;
+}
+
+.cartBtn button{
+  height: 20px;
+  padding: 2px 4px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+.cartBtn .lessBtn{
+  background-color: #710605;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.cartBtn .plusBtn{
+  background-color: green;
+  cursor: pointer;
+}
+
+
+section {
+  width: 100%;
+  height: 400px;
+}
+
+.hero_img{
+  position: relative;
+}
+
+ .hero_img img{
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.show{
+  opacity: 1!important;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switcher{
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.left_btn, .center_btn, .right_btn{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:#e0d2d2;
+  cursor: pointer;
+}
+
+.left_btn:hover, .center_btn:hover, .right_btn:hover{
+  box-shadow: inset 0 0 4px #640101a1;
+}
+
+.active{
+  background-color: #710605;
+
+}
+
+.loadingBtn {
+  margin: 10px;
+  background-color:  #710605;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.send_btn:hover , .loadingBtn:hover{
+  box-shadow: inset 0 0 8px #000000c7;
+}
+
+.send_btn:hover{
+  box-shadow: 0 0 8px #000000c7
+}
+
+.select_categoryContainer{
+margin-bottom: 25px; 
+margin-right: 16%;
+display: flex;
+justify-content: end;
+}
+
+.select_category{
+  cursor: pointer;
+  font-size: 1rem;
+text-align: center;
+  padding: 2px;
+  background-color: #710605;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.select_category option{
+  background-color: white;
+  color: #710605;
+}
+
+.cardBox {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  box-shadow: inset 0 0 8px #1f1f1fc7; ;
+  border-radius: 8px;
+  justify-content: space-around;
+  font-family: "Bitter", serif;
+}
+
+.product_title {
+  font-size: 1rem;
+}
+
+.img-box {
+  width: 180px;
+  position: relative; 
+}
+
+.product_price {
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  background: gold;
+  border-radius: 2px;
+  padding: 2px;
+  color: white;
+  font-weight: bold;
+}
+
+.imgCard {
+   box-shadow: 0 0 8px #000000c7; 
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product_description {
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.nameProduct{
+  font-weight: bold;
+}
+
+.addToCharBtn{
+  margin: 10px;
+  background-color: #490403;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formsBox{
+  padding: 20px;
+  margin: -9px  0px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  }
+
+.form_info{
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 4px 5px #050101;
+  color: #ffffff;
+}
+
+.selectContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selectContainer{
+  display: none;
+}
+
+label{
+  text-shadow: 1px 4px 5px #050101;
+  color: #ffffff;
+  font-weight: bold;
+}
+form{
+gap: 8px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.first_row{
+  display: flex;
+  gap: 20px;
+}
+
+.string-input,
+.number-input, .second_row{
+display: flex;
+gap: 5px;
+flex-direction: column;
+
+}
+
+.number-input{
+  width: 80px;
+}
+
+input, textarea {
+  padding: 14px 40px 14px 10px;
+  border: 2px solid #3f455f9f;
+  border-radius: 5px;
+}
+
+.send_btn{
+  border: none;
+  align-self:center;
+  margin: 10px 0px;
+  padding: 10px 0;
+  width: 80px;
+  background-color:  #710605;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.metodSelect{
+  background-color:  #710605;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 3px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px #640101a1;
+}
+
+.metodSelect option{
+  background-color: #ffffff;
+  color: #710605;
+  font-weight: bold;
+}
