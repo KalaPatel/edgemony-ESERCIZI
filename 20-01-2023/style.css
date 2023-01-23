@@ -228,12 +228,12 @@ section {
   cursor: pointer;
 }
 
-.send_btn:hover , .loadingBtn:hover{
+ .loadingBtn:hover{
   box-shadow: inset 0 0 8px #000000c7;
 }
 
 .send_btn:hover{
-  box-shadow: 0 0 8px #000000c7
+  box-shadow: inset 0 0 8px #3b1717c7
 }
 
 .select_categoryContainer{
@@ -253,6 +253,7 @@ text-align: center;
   border: none;
   color: white;
   font-weight: bold;
+  outline: none;
 }
 
 .select_category option{
@@ -345,7 +346,7 @@ text-align: center;
   justify-content: center;
   text-align: center;
   text-shadow: 1px 4px 5px #050101;
-  color: #ffffff;
+  color: #ffe4e4;
 }
 
 .selectContainer{
@@ -413,6 +414,7 @@ input, textarea {
   padding: 3px;
   border-radius: 4px;
   box-shadow: inset 0 0 4px #640101a1;
+  outline: none;
 }
 
 .metodSelect option{

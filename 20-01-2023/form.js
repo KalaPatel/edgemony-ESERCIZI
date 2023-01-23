@@ -38,7 +38,6 @@ inputSelectorContainer.addEventListener("change", () => {
      } else {
       putInputContainer.classList.add("selectContainer")
      }
-  
 } )
 
 
