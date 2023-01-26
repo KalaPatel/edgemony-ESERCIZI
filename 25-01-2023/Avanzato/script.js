@@ -1,5 +1,4 @@
 import { cE, qS } from "./utils.js";
-import { GET } from "./fetch.js";
 import myJson from "./mocks.json" assert { type: "json" };
 console.log(myJson);
 const bodyEl = qS("body");

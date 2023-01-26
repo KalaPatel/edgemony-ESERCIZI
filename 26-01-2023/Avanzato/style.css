@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #f2f2f2;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nutritions_Info {
+  height: 40px;
+  width: 310px;
+  /* height: 400px; */
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(27, 27, 27, 0.5);
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.nutritions_Info p {
+  font-weight: bold;
+}
+
+.infoBox div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.infoBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.card_Box {
+  padding: 6px;
+  position: relative;
+  height: 230px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  background-color: #977517;
+  width: 230px;
+}
+
+.card_Box:hover {
+  cursor: pointer;
+}
+
+.card_Box p {
+  margin: 5px 0;
+}
+
+img {
+  height: 274px;
+  width: 230px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.graphBox {
+  height: 5px;
+  width: 210px;
+  background-color: #f2f2f2;
+}
+
+.carbGraph {
+  height: 100%;
+  background-color: rgb(135, 240, 128);
+}
+
+.proteinGraph {
+  height: 100%;
+  background-color: lightcoral;
+}
+
+.sugarGraph {
+  height: 100%;
+  background-color: rgb(128, 160, 240);
+}
+
+.fatGraph {
+  height: 100%;
+  background-color: rgb(240, 199, 128);
+}
+
+.card_Box:hover .nutritions_Info {
+  height: 230px;
+  width: 240px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.711);
+}
+
+.nutritions_Info:hover p,
+.nutritions_Info:hover .firstlastName,
+.nutritions_Info:hover .ageBoxEl {
+  visibility: visible;
+  opacity: 1;
+}
+
+.familyName {
+  color: #f1d608c9;
+}
+
+.card_Box:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
