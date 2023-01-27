@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&family=Rokkitt:wght@400;700&display=swap");
+
+body {
+  font-family: "Rokkitt", serif;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.894) 0%,
+    rgba(1, 48, 36, 0.916) 58%,
+    rgb(0, 0, 0) 83%
+  );
+  color: rgb(238, 254, 246);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  font-family: "Rokkitt", serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 10px 0px;
+}
+
+.wrapperMovieSections {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wrapperMovieSections h2 {
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.top_rated,
+.popularSeries,
+.onAirSeries {
+  display: flex;
+  padding: 10px;
+  overflow-x: scroll;
+  font-size: 1.2rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+}
+
+img {
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.45s;
+}
+
+.img_container {
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.img_container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 80px rgb(1, 40, 32);
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: rgb(3, 117, 54);
+  box-shadow: 0 0 3px rgb(1, 28, 8);
+}
