@@ -1,9 +1,11 @@
-const BASE_URL = "https://api.themoviedb.org/3/tv/";
+const BASE_URL = "https://api.themoviedb.org/3/";
 
-const API_KEY = "3952ada8611fe5cc504d6b498fdac98d";
+const API_KEY = "?api_key=3952ada8611fe5cc504d6b498fdac98d";
 
-const GET = async (endpoint) => {
-  const res = await fetch(BASE_URL + endpoint + API_KEY);
+//api.themoviedb.org/3/search/tv?api_key=3952ada8611fe5cc504d6b498fdac98d&query=Arcane
+
+const GET = async (endpoint, query = "") => {
+  const res = await fetch(BASE_URL + endpoint + API_KEY + query);
   const data = await res.json();
   return data;
 };

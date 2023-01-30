@@ -10,16 +10,36 @@
   </head>
   <body>
     <header>
-      <h1>FLIXNET</h1>
-      <p><a href="./tvsearchPage.html">Cerca per titolo</a></p>
+      <h1><a href="./index.html"> PATELIX</a></h1>
+      <!-- <a href="./tvsearchPage.html">Cerca per titolo</a> -->
+      <div class="searchbar">
+        <form id="searchTitle">
+          <label for="showTitle"></label>
+          <input
+            class="inputText"
+            type="text"
+            name="showTitle"
+            id="showTitle"
+            placeholder="Cerca per titolo"
+          />
+          <input class="inputSubmit" type="submit" value="SEARCH" />
+        </form>
+      </div>
     </header>
-    <main class="wrapperMovieSections">
-      <h2>Top Rated</h2>
-      <section class="top_rated"></section>
-      <h2>Popular</h2>
-      <section class="popularSeries"></section>
-      <h2>On air</h2>
-      <section class="onAirSeries"></section>
+    <main>
+      <section class="wrapperMovieSections">
+        <h2>Top Rated</h2>
+        <section class="top_rated"></section>
+        <h2>Popular</h2>
+        <section class="popularSeries"></section>
+        <h2>On air</h2>
+        <section class="onAirSeries"></section>
+
+        <section class="modal">
+          <div class="overlay"></div>
+        </section>
+      </section>
+      <section class="cardSearched"></section>
     </main>
   </body>
 </html>
