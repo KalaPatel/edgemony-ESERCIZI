@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Il processo",
+    "author": "Franz Kafka",
+    "genre": "Narrativa",
+    "price": 8
+  },
+  {
+    "title": "Palomar",
+    "author": "Italo Calvino",
+    "genre": "Narrativa",
+    "price": 12
+  },
+  {
+    "title": "Cecità",
+    "author": "José Saramago",
+    "genre": "Fantascienza/distopia",
+    "price": 10
+  },
+  {
+    "title": "1984",
+    "author": "George Horwell",
+    "genre": "Fantascienza/distopia",
+    "price": 11
+  },
+  {
+    "title": "Fight Club",
+    "author": "Chuck Palahniuk",
+    "genre": "Fantascienza/psicologico",
+    "price": 13
+  },
+  {
+    "title": "Cronosisma",
+    "author": "Kurt Vonnegut",
+    "genre": "Fantascienza/satira",
+    "price": 15
+  }
+]
