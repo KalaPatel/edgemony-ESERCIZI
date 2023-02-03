@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-image: url("./img/sfon.jpg");
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  box-shadow: 0 0 4px #161717d0;
+  color: #0b5863;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 8px;
+  height: 400px;
+  width: 600px;
+  background-color: #f7fdfdf0;
+}
+
+a:active,
+a:link,
+a:visited {
+  color: #0b5863;
+  text-decoration: none;
+}
+
+main ul li {
+  list-style: none;
+  margin: 5px;
+}
+/* 
+.right-triangle {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 50vh 0 70vh 50vw;
+  border-color: transparent transparent transparent #ccfcff;
+} */
+
+.section {
+  box-shadow: 0 0 30px #161717d0;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.container {
+  height: 325px;
+  position: relative;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container h1 {
+  position: absolute;
+  bottom: 75px;
+  right: 350px;
+}
+
+.img1 h1 {
+  color: #063941;
+}
+
+.img2 h1 {
+  color: #d6f2f2;
+  text-shadow: 1px 4px 5px #074454;
+}
