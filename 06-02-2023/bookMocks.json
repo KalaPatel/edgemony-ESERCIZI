@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Il processo",
+    "author": "Franz Kafka",
+    "genre": "Narrativa",
+    "price": 8
+  },
+  {
+    "id": 2,
+    "title": "Palomar",
+    "author": "Italo Calvino",
+    "genre": "Narrativa",
+    "price": 12
+  },
+  {
+    "id": 3,
+    "title": "Cecità",
+    "author": "José Saramago",
+    "genre": "Fantascienza/distopia",
+    "price": 10
+  },
+  {
+    "id": 4,
+    "title": "1984",
+    "author": "George Horwell",
+    "genre": "Fantascienza/distopia",
+    "price": 11
+  },
+  {
+    "id": 5,
+    "title": "Fight Club",
+    "author": "Chuck Palahniuk",
+    "genre": "Fantascienza/psicologico",
+    "price": 13
+  },
+  {
+    "id": 6,
+    "title": "Cronosisma",
+    "author": "Kurt Vonnegut",
+    "genre": "Fantascienza/satira",
+    "price": 15
+  },
+  {
+    "id": 7,
+    "title": "Homo Deus",
+    "author": "Yuval Harari",
+    "genre": "Saggio",
+    "price": 17
+  },
+  {
+    "id": 8,
+    "title": "Brothers",
+    "author": "Yu Hua",
+    "genre": "Narrativa",
+    "price": 15
+  },
+  {
+    "id": 9,
+    "title": "IT",
+    "author": "Stephen King",
+    "genre": "Horror fiction",
+    "price": 15
+  },
+  {
+    "id": 10,
+    "title": "Le notti bianche",
+    "author": "Fëdor Dostoevskij0",
+    "genre": "Narrativa",
+    "price": 8
+  }
+]
