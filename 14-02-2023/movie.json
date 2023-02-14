@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "63ebafb0ed0a1d813a9ca5a8"
+  },
+  "titolo": "Dunkirk",
+  "anno": 2017,
+  "genere": [
+    "Drammatico",
+    "Guerra",
+    "Storico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb089ed0a1d813a9ca5a9"
+  },
+  "titolo": "Borat - Studio culturale sull'America a beneficio della gloriosa nazione del Kazakistan",
+  "anno": 2006,
+  "genere": [
+    "Commedia",
+    "Mockumentary"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb089ed0a1d813a9ca5aa"
+  },
+  "titolo": "La La Land",
+  "anno": 2016,
+  "genere": [
+    "Musica",
+    "Romantico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb262ed0a1d813a9ca5ac"
+  },
+  "titolo": "The Wolf of Wall Street",
+  "anno": 2013,
+  "genere": [
+    "Drammatico",
+    "Giallo"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb262ed0a1d813a9ca5ad"
+  },
+  "titolo": "La favorita",
+  "anno": 2018,
+  "genere": [
+    "Commedia",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb262ed0a1d813a9ca5ae"
+  },
+  "titolo": "Il talento di Mr. Ripley",
+  "anno": 1999,
+  "genere": [
+    "Thriller",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb262ed0a1d813a9ca5af"
+  },
+  "titolo": "Parasite",
+  "anno": 2019,
+  "genere": [
+    "Thriller",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb40bed0a1d813a9ca5b0"
+  },
+  "titolo": "Fyre - La più grande festa mai avvenuta",
+  "anno": 2019,
+  "genere": [
+    "Documentario"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb40bed0a1d813a9ca5b1"
+  },
+  "titolo": "Don't Look Up",
+  "anno": 2021,
+  "genere": [
+    "Commedia",
+    "Catastrofico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb40bed0a1d813a9ca5b2"
+  },
+  "titolo": "Shutter Island",
+  "anno": 2010,
+  "genere": [
+    "Thriller",
+    "Mystery"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb40bed0a1d813a9ca5b3"
+  },
+  "titolo": "Grand Budapest Hotel",
+  "anno": 2014,
+  "genere": [
+    "Commedia",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb40bed0a1d813a9ca5b4"
+  },
+  "titolo": "Birdman",
+  "anno": 2014,
+  "genere": [
+    "Commedia",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb591ed0a1d813a9ca5b5"
+  },
+  "titolo": "Scappa - Get Out",
+  "anno": 2017,
+  "genere": [
+    "Horror",
+    "Thriller"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb591ed0a1d813a9ca5b6"
+  },
+  "titolo": "American Beauty",
+  "anno": 1999,
+  "genere": [
+    "Romantico",
+    "Drammatico"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb591ed0a1d813a9ca5b7"
+  },
+  "titolo": "Revenant - Redivivo",
+  "anno": 2015,
+  "genere": [
+    "Western",
+    "Avventura"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb591ed0a1d813a9ca5b8"
+  },
+  "titolo": "Prova a prendermi",
+  "anno": 2002,
+  "genere": [
+    "Drammatico",
+    "Giallo"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb591ed0a1d813a9ca5b9"
+  },
+  "titolo": "Midsommar",
+  "anno": 2019,
+  "genere": [
+    "Horror",
+    "Thriller"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb6b7ed0a1d813a9ca5ba"
+  },
+  "titolo": "Borat - Seguito di film cinema. Consegna di portentosa bustarella a regime americano per beneficio di fu gloriosa nazione di Kazakistan",
+  "anno": 2020,
+  "genere": [
+    "Commedia",
+    "Mockumentary"
+  ]
+},{
+  "_id": {
+    "$oid": "63ebb6b7ed0a1d813a9ca5bb"
+  },
+  "titolo": "Mean Girls",
+  "anno": 2004,
+  "genere": [
+    "Commedia"
+  ]
+}]
