@@ -1,0 +1,94 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    FORM SCARPE
+     <form action="/scarpe" method="POST" autocomplete="off">
+              <input type="hidden" name="_id" value="{{scarpeNota._id}}" />
+              <div class="form-row">
+                <div class="form-group col-md-6">
+
+                  <label>Modello scarpa</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="type"
+                    placeholder="Modello"
+                    value="{{scarpeNota.type}}"
+                  /></div>
+                  
+                  <div class="form-group col-md-6">
+                  <label>Colore scarpa</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="color"
+                    placeholder="Colore"
+                    value="{{scarpeNota.color}}"
+                  /></div>
+                  
+                  <div class="form-group col-md-6">
+                  <label>Misura scarpa</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="size"
+                    placeholder="Misura"
+                    value="{{scarpeNota.size}}"
+                  /></div>
+                  
+                  <div class="form-group col-md-6">
+                  <label>Quantità</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="quantity"
+                    placeholder="Quantità"
+                    value="{{scarpeNota.quantity}}"
+                  /></div>
+                  
+                  <div class="form-group col-md-6">
+                  <label>Note:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="note"
+                    placeholder="Note:"
+                    value="{{scarpeNota.note}}"
+                  /></div>
+            
+              <div class="form-group float-right my-5">
+                {{! viene richiamato dal metodo post }}
+                <button type="submit" class="btn btn-primary btn-sm">
+                  Invia
+                </button>
+              </div>
+            </form>
+  </body>
+</html>
