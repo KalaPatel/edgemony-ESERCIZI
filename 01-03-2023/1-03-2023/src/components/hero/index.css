@@ -1,0 +1,24 @@
+.heroSection {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.heroSection img {
+  height: 100%;
+  width: 100%;
+  filter: blur(1.2px);
+  object-fit: cover;
+}
+
+.heroSection h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px rgb(175, 126, 2);
+  position: absolute;
+  top: calc(50% - 50px);
+  right: calc(50% - 30px);
+  width: 260px;
+  text-align: center;
+  margin: 10px;
+  font-size: 2rem;
+}

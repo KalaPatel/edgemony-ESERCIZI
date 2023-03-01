@@ -1,0 +1,14 @@
+/* .bodyApp {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+} */
+
+.bodyApp main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
