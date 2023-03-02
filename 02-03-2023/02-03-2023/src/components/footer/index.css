@@ -1,0 +1,19 @@
+.footerSection {
+  padding: 20px;
+  height: 140px;
+  width: 100%;
+  background-color: rgb(255, 210, 96);
+  box-shadow: 0 0 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerSection img {
+  padding: 5px;
+  width: 60px;
+}
+
+.footerSection h5 a {
+  color: black;
+}

@@ -1,0 +1,30 @@
+.headerSection {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(255, 210, 96);
+  box-shadow: 0 0 3px black;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}

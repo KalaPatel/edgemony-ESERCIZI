@@ -1,0 +1,32 @@
+.cardProduct {
+  background-color: rgb(242, 236, 237);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 40px;
+  box-shadow: 0 0 4px gray;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+}
+/* .cardProduct .img-container {
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid blue;
+} */
+
+.cardProduct img {
+  object-fit: contain;
+  width: 200px;
+  height: 150px;
+}
+
+.cardProduct .info-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
