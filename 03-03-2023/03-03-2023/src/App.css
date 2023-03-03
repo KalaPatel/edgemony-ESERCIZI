@@ -1,0 +1,42 @@
+/* .bodyApp {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+} */
+
+.bodyApp main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenMode {
+  position: absolute;
+  top: 5px;
+  right: 55px;
+  background: linear-gradient(
+    70deg,
+    rgb(116 214 223) 47%,
+    rgb(53 93 183 / 86%) 52%,
+    rgb(7 21 90) 57%
+  );
+  height: 30px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+.screenMode code {
+  cursor: pointer;
+}
+
+.darkMode {
+  color: white;
+  background-color: #000000cf;
+}

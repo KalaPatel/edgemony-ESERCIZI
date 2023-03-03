@@ -1,0 +1,55 @@
+.cardModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0; */
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.overlay_Card {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 380px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  top: 0;
+  left: 0;
+  color: rgb(14, 4, 4);
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.imgBox {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.399);
+  margin-bottom: 10px;
+}
+
+.imgBox img {
+  align-self: center;
+
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.buttonContainer {
+  display: flex;
+  align-self: center;
+  gap: 28px;
+}
+
+.overlay_Card p {
+  margin: 5px;
+}
