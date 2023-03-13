@@ -1,0 +1,28 @@
+.todo_card {
+  /* border-top-left-radius: 50px; */
+  /* border: 1px double rgb(34, 82, 178); */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.545);
+
+  width: 400px;
+  box-shadow: 6px 4px 1px rgb(241, 193, 121);
+
+  background-color: whitesmoke;
+}
+
+.checkboxInput {
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.todo_info h3 {
+  width: 250px;
+}
+
+.todo_info p {
+  color: rgb(148, 139, 139);
+  font-style: italic;
+}
