@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.NewToDo h2 {
+  text-shadow: 2px 3px 2px orange;
+}
+
 .formComponent {
   align-items: center;
   display: flex;

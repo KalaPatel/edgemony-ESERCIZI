@@ -1,6 +1,5 @@
 .todo_card {
-  /* border-top-left-radius: 50px; */
-  /* border: 1px double rgb(34, 82, 178); */
+  gap: 10px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -8,9 +7,16 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.545);
 
   width: 400px;
-  box-shadow: 6px 4px 1px rgb(241, 193, 121);
-
+  box-shadow: 6px 4px 1px rgb(253, 219, 167);
+  cursor: pointer;
   background-color: whitesmoke;
+}
+
+.completed {
+  background-color: #eedabc;
+  text-decoration: line-through;
+  color: rgb(236, 102, 115);
+  box-shadow: 6px 4px 1px rgb(224, 62, 78);
 }
 
 .checkboxInput {
@@ -26,3 +32,10 @@
   color: rgb(148, 139, 139);
   font-style: italic;
 }
+
+.todo_info:hover {
+  text-decoration: line-through;
+  color: rgb(136, 9, 9);
+}
+
+/* text-decoration: line-through; */

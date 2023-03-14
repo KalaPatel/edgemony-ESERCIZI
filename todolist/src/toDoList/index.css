@@ -1,4 +1,7 @@
 .todo_wrapper {
+  margin: 16px 0 10px 0;
+  height: 600px;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;

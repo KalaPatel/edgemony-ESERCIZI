@@ -1,15 +1,19 @@
 import "./index.css";
-import { toDoList } from "../mocks/toDoListMock";
-import ToDoCard from "../toDoCard/ToDoCard";
 
-const ToDoList = ({ newToDoMock, setIdValue }) => {
-  const toDoArray = [...newToDoMock, ...toDoList];
-  setIdValue(toDoList.length);
+import ToDoCard from "../toDoCard";
+
+const ToDoList = ({ newToDoMock, setNewTodoMock }) => {
   return (
     <div className="todo_wrapper">
-      {toDoArray.map((todo) => (
-        <ToDoCard todoData={todo} key={todo.id} />
-      ))}
+      {newToDoMock
+        .sort((item1, item2) => (item1.id >= item2.id ? -1 : 1))
+        .map((todo) => (
+          <ToDoCard
+            todoData={todo}
+            key={todo.id}
+            setNewTodoMock={setNewTodoMock}
+          />
+        ))}
     </div>
   );
 };

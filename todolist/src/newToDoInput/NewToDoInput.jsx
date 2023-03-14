@@ -1,6 +1,6 @@
 import "./index.css";
 import { useState } from "react";
-const NewToDo = ({ setNewTodoMock, idValue, newToDoMock }) => {
+const NewToDo = ({ setNewTodoMock }) => {
   const [addNewToDo, setAddNewToDo] = useState("");
   const [hour, setHour] = useState("");
   const addNewToDoInput = (e) => {
@@ -10,16 +10,28 @@ const NewToDo = ({ setNewTodoMock, idValue, newToDoMock }) => {
   const onHandleSubmit = (e) => {
     e.preventDefault();
 
-    setNewTodoMock([
-      ...newToDoMock,
-      {
-        id: idValue + 1,
-        todo: addNewToDo,
-        hour: hour,
-      },
-    ]);
+    setNewTodoMock((prev) => {
+      if (
+        !prev.find(
+          (prev) => prev.todo.toLowerCase() === addNewToDo.toLowerCase()
+        )
+      ) {
+        return [
+          ...prev,
+          {
+            id: prev.length + 1,
+            todo: addNewToDo,
+            hour: hour,
+            completed: false,
+          },
+        ];
+      } else {
+        alert("This todo already exist!");
+        return prev;
+      }
+    });
 
-    setNewTodoMock(...newToDoArr);
+    setAddNewToDo("");
   };
 
   return (
@@ -29,7 +41,7 @@ const NewToDo = ({ setNewTodoMock, idValue, newToDoMock }) => {
         <input
           type="text"
           value={addNewToDo}
-          placeholder="New To Do"
+          placeholder="New ToDo"
           onChange={addNewToDoInput}
         />
 
