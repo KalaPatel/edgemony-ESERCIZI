@@ -24,12 +24,12 @@ function App() {
         endpoint="/products?limit=10&skip=10"
         idTarget="selfCareSection"
       />
-      {/*    <CardList
+      <CardList
         title="Household Products"
         endpoint="/products?limit=10&skip=25"
         idTarget="householdSection"
       />
-   <CardList
+      <CardList
         title="Women"
         endpoint="/products?limit=15&skip=35"
         idTarget="womenSection"
@@ -38,7 +38,7 @@ function App() {
         title="Men"
         endpoint="/products?limit=10&skip=50"
         idTarget="menSection"
-      /> */}
+      />
       <Footer />
     </div>
   );
