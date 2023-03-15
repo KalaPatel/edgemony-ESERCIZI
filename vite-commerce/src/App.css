@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.App__miniCards {
+  display: flex;
+  gap: 10px;
+  margin: 0 60px;
+  padding: 10px;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(244, 243, 238, 0.933);
+}
+
+::-webkit-scrollbar-thumb {
+  border-top-right-radius: 2px;
+  background: #ebbe9b;
+}
