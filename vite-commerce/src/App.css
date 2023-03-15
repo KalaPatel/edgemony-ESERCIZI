@@ -10,6 +10,8 @@
   margin: 0 60px;
   padding: 10px;
   overflow-x: scroll;
+  display: flex;
+  justify-content: center;
 }
 
 ::-webkit-scrollbar {
