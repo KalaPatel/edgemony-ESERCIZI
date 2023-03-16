@@ -1,10 +1,18 @@
 import { useState } from "react";
+import { BsCart2 } from "react-icons/bs";
+import CartList from "../cartList";
 import "./index.css";
 
-const Navbar = ({ setEndpointValue }) => {
+const Navbar = ({ setEndpointValue, cartProduct }) => {
   const [inputValue, setInputValue] = useState("");
+  const [cartOpen, setCartOpen] = useState(false);
 
+  const localStorageCartProductList =
+    window !== "undefined" &&
+    JSON.parse(localStorage.getItem("cartProductList"));
   const onHandleInput = (e) => setInputValue(() => e.target.value);
+
+  const openCartBtn = () => setCartOpen((prev) => !prev);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +38,16 @@ const Navbar = ({ setEndpointValue }) => {
           Cerca
         </button>
       </form>
+      <BsCart2 className="cartIconMenu" onClick={openCartBtn} />
+      <div className="productCartNum">
+        {localStorageCartProductList
+          ? localStorageCartProductList.length
+          : cartProduct.length}
+      </div>
+      {cartOpen && (
+        <CartList cartProduct={localStorageCartProductList || cartProduct} />
+      )}
+      {/* <ModalCart cartProduct={cartProduct} /> */}
     </div>
   );
 };

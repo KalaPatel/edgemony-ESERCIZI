@@ -8,36 +8,41 @@ import MiniCardList from "./components/miniCardList/MiniCardList";
 
 function App() {
   const [endpointValue, setEndpointValue] = useState("");
-
+  const [cartProduct, setCartProduct] = useState([]);
   return (
     <div className="App">
-      <Navbar setEndpointValue={setEndpointValue} />
+      <Navbar setEndpointValue={setEndpointValue} cartProduct={cartProduct} />
       <Hero />
       <MiniCardList endpointValue={endpointValue} />
       <CardList
         title="Technology"
         endpoint="/products?limit=10"
         idTarget="technologySection"
+        setCartProduct={setCartProduct}
       />
       <CardList
         title="Skincare"
         endpoint="/products?limit=10&skip=10"
         idTarget="selfCareSection"
+        setCartProduct={setCartProduct}
       />
       <CardList
         title="Household Products"
         endpoint="/products?limit=10&skip=25"
         idTarget="householdSection"
+        setCartProduct={setCartProduct}
       />
       <CardList
         title="Women"
         endpoint="/products?limit=15&skip=35"
         idTarget="womenSection"
+        setCartProduct={setCartProduct}
       />
       <CardList
         title="Men"
         endpoint="/products?limit=10&skip=50"
         idTarget="menSection"
+        setCartProduct={setCartProduct}
       />
       <Footer />
     </div>

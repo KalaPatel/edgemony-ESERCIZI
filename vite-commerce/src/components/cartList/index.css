@@ -1,0 +1,14 @@
+.CartList {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 250px;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  right: 24px;
+  z-index: 2;
+  padding: 15px;
+  gap: 5px;
+  box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.364);
+}

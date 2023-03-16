@@ -52,3 +52,15 @@
   font-size: 1.2rem;
   text-align: right;
 }
+
+.cart-Icon {
+  font-size: 1.5rem;
+  color: green;
+}
+.contentShow {
+  display: none;
+}
+
+.cart-Icon:hover + .contentShow {
+  display: block;
+}
