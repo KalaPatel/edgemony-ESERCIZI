@@ -3,7 +3,13 @@ import { BsCart2 } from "react-icons/bs";
 import CartList from "../cartList";
 import "./index.css";
 
-const Navbar = ({ setEndpointValue, cartProduct }) => {
+const Navbar = ({
+  setEndpointValue,
+  cartProduct,
+  setCartProduct,
+  setQtyValue,
+  qtyValue,
+}) => {
   const [inputValue, setInputValue] = useState("");
   const [cartOpen, setCartOpen] = useState(false);
 
@@ -45,7 +51,12 @@ const Navbar = ({ setEndpointValue, cartProduct }) => {
           : cartProduct.length}
       </div>
       {cartOpen && (
-        <CartList cartProduct={localStorageCartProductList || cartProduct} />
+        <CartList
+          cartProduct={cartProduct}
+          setCartProduct={setCartProduct}
+          setQtyValue={setQtyValue}
+          qtyValue={qtyValue}
+        />
       )}
       {/* <ModalCart cartProduct={cartProduct} /> */}
     </div>

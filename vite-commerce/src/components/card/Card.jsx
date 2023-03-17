@@ -2,18 +2,54 @@ import { shortDescription } from "../../utils/func";
 import { BsCart2 } from "react-icons/bs";
 import "./index.css";
 
-const Card = ({ productData, setCartProduct }) => {
+const Card = ({ productData, setCartProduct, qtyValue }) => {
   const onAddCartBtn = () => {
-    const localStorageCartProduct = JSON.parse(
-      localStorage.getItem("cartProductList") || "[]"
+    // const localStorageCartProduct = JSON.parse(
+    //   localStorage.getItem("cartProductList") || "[]"
+    // );
+
+    setCartProduct((prev) => [
+      ...prev,
+      {
+        id: productData.id,
+        title: productData.title,
+        description: productData.description,
+        price: productData.price,
+        thumbnail: productData.thumbnail,
+        qty: qtyValue,
+      },
+    ]);
+
+    setCartProduct((prev) =>
+      !!prev.find((item) => item.id === productData.id)
+        ? [
+            ...prev,
+            {
+              id: productData.id,
+              title: productData.title,
+              description: productData.description,
+              price: productData.price,
+              thumbnail: productData.thumbnail,
+              qty: qtyValue,
+            },
+          ]
+        : [...prev, productData]
     );
 
-    setCartProduct((prev) => [...prev, productData]);
-
-    localStorage.setItem(
-      "cartProductList",
-      JSON.stringify([...localStorageCartProduct, productData])
-    );
+    // localStorage.setItem(
+    //   "cartProductList",
+    //   JSON.stringify([
+    //     ...localStorageCartProduct,
+    //     {
+    //       id: productData.id,
+    //       title: productData.title,
+    //       description: productData.description,
+    //       price: productData.price,
+    //       thumbnail: productData.thumbnail,
+    //       qty: 1,
+    //     },
+    //   ])
+    // );
   };
   return (
     <div className="Card">

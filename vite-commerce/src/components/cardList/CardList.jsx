@@ -4,7 +4,14 @@ import Card from "../card/Card";
 import SpinnerLoading from "../spinnerLoading/SpinnerLoading";
 import "./index.css";
 
-const CardList = ({ title, endpoint, idTarget, setCartProduct }) => {
+const CardList = ({
+  title,
+  endpoint,
+  idTarget,
+  setCartProduct,
+  setQtyValue,
+  qtyValue,
+}) => {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
@@ -21,6 +28,8 @@ const CardList = ({ title, endpoint, idTarget, setCartProduct }) => {
               productData={product}
               key={product.id}
               setCartProduct={setCartProduct}
+              setQtyValue={setQtyValue}
+              qtyValue={qtyValue}
             />
           ))
         ) : (

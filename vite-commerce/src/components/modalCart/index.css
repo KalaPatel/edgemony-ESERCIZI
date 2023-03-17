@@ -16,3 +16,22 @@
 .qtySection p {
   margin: 0;
 }
+
+.lessBtn,
+.plusBtn {
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 18px;
+  font-weight: bold;
+}
+
+.lessBtn {
+  background-color: tomato;
+}
+
+.plusBtn {
+  background-color: #77dd77;
+}
