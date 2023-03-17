@@ -20,21 +20,21 @@ const Card = ({ productData, setCartProduct, qtyValue }) => {
       },
     ]);
 
-    setCartProduct((prev) =>
-      !!prev.find((item) => item.id === productData.id)
-        ? [
-            ...prev,
-            {
-              id: productData.id,
-              title: productData.title,
-              description: productData.description,
-              price: productData.price,
-              thumbnail: productData.thumbnail,
-              qty: qtyValue,
-            },
-          ]
-        : [...prev, productData]
-    );
+    // setCartProduct((prev) =>
+    //   !!prev.find((item) => item.id === productData.id)
+    //     ? [
+    //         ...prev,
+    //         {
+    //           id: productData.id,
+    //           title: productData.title,
+    //           description: productData.description,
+    //           price: productData.price,
+    //           thumbnail: productData.thumbnail,
+    //           qty: qtyValue,
+    //         },
+    //       ]
+    //     : [...prev, productData]
+    // );
 
     // localStorage.setItem(
     //   "cartProductList",

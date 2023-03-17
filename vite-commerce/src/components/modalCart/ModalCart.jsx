@@ -41,6 +41,8 @@ const ModalCart = ({ cartData, setCartProduct, setQtyValue, qtyValue }) => {
     }
   };
 
+  console.log(cartData);
+
   return (
     <div className="ModalCart">
       <div className="productCartImg">
