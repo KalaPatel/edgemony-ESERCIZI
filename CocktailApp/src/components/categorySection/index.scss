@@ -1,0 +1,16 @@
+.CategorySection {
+  background-color: #031d2be6;
+  color: white;
+  font-weight: bold;
+  .category-List {
+    justify-content: space-around;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 20px;
+    cursor: pointer;
+    li:hover {
+      text-decoration: underline;
+    }
+  }
+}
