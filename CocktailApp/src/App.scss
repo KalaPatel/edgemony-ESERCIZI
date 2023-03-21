@@ -1,7 +1,9 @@
-.App {
-  height: 100%;
-  width: 100%;
-  background-image: url("https://images.unsplash.com/photo-1552301807-3285ca1aa48d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
-  background-size: contain;
-  font-family: "Macondo", cursive;
-}
+@import "./styles/variables";
+// .App {
+//   height: 100%;
+//   width: 100%;
+//   // https://png2.cleanpng.com/sh/0771ef7c2793b764bec7f792ac766a83/L0KzQYm3UsA4N5Vnj5H0aYP2gLBuTgdqdpYye9Hsa4Tkeb20jfFzfJpzgZ97ZXSwgsb6kBlidl5vjdtsZT32hMPolBJmeqNARdV4Y3v3cbrzTcViP5JoSqMEM0e3Rba6TsMxPGE9TKYBMUW0R4qCVMUzOWM3TqY3cH7q/kisspng-wine-cocktail-martini-red-russian-juice-strawberry-cocktail-5a7ac2193745e3.3040844615179945212264.png
+//   background-image: url("https://images.unsplash.com/photo-1552301807-3285ca1aa48d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+//   background-size: contain;
+//   font-family: $mainFont;
+// }

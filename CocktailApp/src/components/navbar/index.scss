@@ -1,18 +1,20 @@
+@import "../../styles/variables";
+
 .Navbar {
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #031d2be6;
-  color: white;
-  box-shadow: 3px 3px 3px solid rgba(0, 0, 0, 0.464);
+  background-color: $mainBGcolor;
+  color: $textColor;
+  box-shadow: 3px 3px 3px solid $shadowBlackAlpha;
   .name-logo_container {
     display: flex;
     align-items: center;
     // gap: 5px;
     .logo_img {
       width: 70px;
-      filter: drop-shadow(3px 3px 1px #01334ee6);
+      filter: drop-shadow(3px 3px 1px $mainBGcolor);
     }
     h4 {
       font-size: 1.6rem;

@@ -1,51 +1,46 @@
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
 .DrinkCard {
+  cursor: pointer;
   position: relative;
-  border: 4px solid rgb(237, 237, 243);
+  border: 4px solid $borderCardColor;
   .Card {
     height: 285px;
-    background-color: white;
+    background-color: $textColor;
     img {
       width: 250px;
     }
     .drinkName {
-      color: rgb(0, 0, 0);
+      color: $mainBGcolor;
       text-align: center;
     }
   }
   .drink_infoBox {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: space-between;
+    @include flex_setting(column, flex-start, space-between, 10px);
     padding: 30px;
     opacity: 0;
     position: absolute;
     color: #053853;
-    font-weight: bold;
-    background-color: #dbebf7;
+    font-weight: $boldText;
+    background-color: $heroBGColor;
     width: 250px;
-    height: 255px;
+    height: 275px;
     top: 100px;
     left: 20px;
     transition: opacity 0.55s ease-out;
-    font-family: "Macondo", cursive;
     &:hover {
       opacity: 1;
       top: 100px;
       border-radius: 6px;
-      box-shadow: 0px 0px 4px rgb(3, 3, 42);
+      box-shadow: 0px 0px 4px $shadowBlackAlpha;
       left: 20px;
+      overflow-y: auto;
     }
     .firstRow-box {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      //   p {
-      //     color: rgb(139, 7, 7);
-      //   }
+      @include flex_setting(row, space-between, center);
     }
     .drinkDescription {
-      color: #056ea7;
+      color: $heroTextColor;
     }
   }
 }

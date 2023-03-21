@@ -1,27 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Macondo&family=Rock+Salt&display=swap");
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
 .Hero {
   height: 270px;
-  background-color: #dbebf7f0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  position: relative;
+  background-color: $heroBGColor;
+  @include flex_setting(row, space-between, center);
+  overflow: hidden;
+
   .hero_text {
-    width: 300px;
-    color: #2676a1e6;
+    color: $heroTextColor;
     text-shadow: 2px 1px 1px #01263ae6;
     text-align: center;
-    font-size: 2.8rem;
-    z-index: 3;
+    font-size: 2rem;
   }
   img {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 250px;
-    filter: drop-shadow(13px 13px 1px rgba(26, 3, 3, 0.686));
+    filter: drop-shadow(13px 13px 1px $shadowBlackAlpha);
   }
 }

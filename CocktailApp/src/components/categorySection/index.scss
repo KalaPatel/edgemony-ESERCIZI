@@ -1,13 +1,13 @@
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
+
 .CategorySection {
-  background-color: #031d2be6;
-  color: white;
-  font-weight: bold;
+  background-color: $mainBGcolor;
+  color: $textColor;
+  font-weight: $boldText;
   .category-List {
-    justify-content: space-around;
+    @include flex_setting(row, space-around, flex-start, 18px 20px, wrap);
     padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px 20px;
     cursor: pointer;
     li:hover {
       text-decoration: underline;

@@ -1,8 +1,15 @@
 import "./index.scss";
 
-const DrinkCard = ({ data }) => {
+const DrinkCard = ({ data, setsingleDrinkModalStatus }) => {
+  const onClickModalOpen = () => {
+    setsingleDrinkModalStatus((prev) => ({
+      ...prev,
+      isVisible: true,
+      data: data,
+    }));
+  };
   return (
-    <div className="DrinkCard">
+    <div className="DrinkCard" onClick={onClickModalOpen}>
       <div className="Card">
         <img src={data.strDrinkThumb} alt={data.strDrink} />
         <h2 className="drinkName">{data.strDrink}</h2>
