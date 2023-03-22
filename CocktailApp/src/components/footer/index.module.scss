@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Footer {
+  @include flex_setting(column, center, center, 20px);
+  height: 120px;
+  background-color: $mainBGcolor;
+  color: $textColor;
+
+  .iconsWrapper {
+    @include flex_setting(row, center, center, 30px);
+    .icons {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.35s;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .link {
+    color: $textColor;
+    text-decoration: none;
+
+    &:visited,
+    &:active {
+      color: $textColor;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

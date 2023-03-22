@@ -5,12 +5,12 @@
   width: 100vw;
   height: 100vh;
   @include flex_setting(row, center, center);
-  &__overlay {
+  .overlay {
     position: relative;
     // border: 2px solid violet;
-    height: 600px;
+    height: 650px;
     width: 350px;
-    .overlay__firstRow {
+    .firstRow {
       height: 50%;
       position: relative;
       img {
@@ -41,7 +41,7 @@
       }
     }
 
-    .overlay__secondRow {
+    .secondRow {
       color: $textColor;
       padding: 20px;
       border-radius: 16px;
@@ -50,17 +50,50 @@
       height: 55%;
       background-color: $mainBGcolor;
       width: 100%;
-      .main_infoBox {
-        padding: 20px;
+      .infoBox {
+        padding: 10px;
         text-align: center;
         hr {
           margin: 10px;
         }
 
         p {
-          font-size: 1.3rem;
+          font-size: 1rem;
+        }
+      }
+      .thirdRow {
+        padding: 10px;
+        font-size: 1.2rem;
+        ul {
+          overflow-x: auto;
+          list-style: none;
+
+          @include flex_setting(row, flex-start, flex-start, 5px);
+          li {
+            width: 120px;
+            text-align: center;
+            img {
+              width: 85px;
+            }
+          }
         }
       }
     }
   }
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.484);
+}
+
+::-webkit-scrollbar-thumb {
+  border-top-right-radius: 2px;
+  background: $textColor;
 }

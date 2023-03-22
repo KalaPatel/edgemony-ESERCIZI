@@ -1,5 +1,6 @@
-import "./index.scss";
 import { BiArrowBack } from "react-icons/bi";
+import { ingredientsArray } from "./../utils/func";
+import style from "./index.module.scss";
 
 const SingleDrinkModal = ({ data, setsingleDrinkModalStatus }) => {
   const onClickModalClose = () => {
@@ -8,37 +9,64 @@ const SingleDrinkModal = ({ data, setsingleDrinkModalStatus }) => {
       isVisible: false,
     }));
   };
+
+  console.log(data.strVideo);
+
   return (
-    <div className="SingleDrinkModal">
-      <div className="SingleDrinkModal__overlay">
-        <div className="overlay__firstRow">
-          <div className="icons">
-            <BiArrowBack className="arrowIcon" onClick={onClickModalClose} />
+    <div className={style.SingleDrinkModal}>
+      <div className={style.overlay}>
+        <div className={style.firstRow}>
+          <div className={style.icons}>
+            <BiArrowBack
+              className={style.arrowIcon}
+              onClick={onClickModalClose}
+            />
           </div>
-          <img src={data.strDrinkThumb} alt={data.strDrink} />
+
+          {data.strVideo !== null ? (
+            <iframe
+              width="100%"
+              height="110%"
+              src={`${data.strVideo.replace(
+                "watch?v=",
+                "embed/"
+              )}?autoplay=1&mute=1`}
+            ></iframe>
+          ) : (
+            <img src={data.strDrinkThumb} alt={data.strDrink} />
+          )}
         </div>
 
-        <div className="overlay__secondRow">
+        <div className={style.secondRow}>
           <h1>{data.strDrink}</h1>
-          <div className="main_infoBox">
-            <div className="typeDescription">
-              <h4> Glass Type</h4>
-              <p className="description"> {data.strGlass}</p>
+          <div className={style.infoBox}>
+            <div>
+              <h3> Glass Type</h3>
+              <p> {data.strGlass}</p>
             </div>
             <hr />
             <div>
-              <h5> Cocktail Type</h5>
-              <p className="description"> {data.strCategory}</p>
+              <h3> Cocktail Type</h3>
+              <p> {data.strCategory}</p>
             </div>
           </div>
 
-          <div className="overlay__thirdRow">
+          <div className={style.thirdRow}>
             <p>Ingredients:</p>
             <ul>
-              <li>{data.strIngredient1}</li>
-              <li>{data.strIngredient2}</li>
-              <li>{data.strIngredient3}</li>
-              <li>{data.strIngredient4}</li>
+              {ingredientsArray(data).map((ingredient) => (
+                <li key={ingredient}>
+                  <img
+                    src={
+                      "https://www.thecocktaildb.com/images/ingredients/" +
+                      ingredient.replace(" ", "%20") +
+                      "-Small.png"
+                    }
+                    alt={ingredient}
+                  />
+                  <p className={style.ingredientText}>{ingredient} </p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

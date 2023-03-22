@@ -8,3 +8,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+
+// <li>
+
+//   <img
+//     src="https://www.thecocktaildb.com/images/ingredients/Olive-Medium.png"
+//     alt=""
+//   />
+//   <p className="ingredientText">Olive </p>
+// </li>;

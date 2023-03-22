@@ -1,4 +1,4 @@
-import "./index.scss";
+import style from "./index.module.scss";
 
 const DrinkCard = ({ data, setsingleDrinkModalStatus }) => {
   const onClickModalOpen = () => {
@@ -8,21 +8,22 @@ const DrinkCard = ({ data, setsingleDrinkModalStatus }) => {
       data: data,
     }));
   };
+
   return (
-    <div className="DrinkCard" onClick={onClickModalOpen}>
-      <div className="Card">
+    <div className={style.DrinkCard} onClick={onClickModalOpen}>
+      <div className={style.card}>
         <img src={data.strDrinkThumb} alt={data.strDrink} />
-        <h2 className="drinkName">{data.strDrink}</h2>
+        <h2 className={style.drinkName}>{data.strDrink}</h2>
       </div>
-      <div className="drink_infoBox">
-        <div className="firstRow-box">
+      <div className={style.infoBox}>
+        <div className={style.firstRow}>
           <h2 className="drink_name">{data.strDrink}</h2>
           <p>{data.strAlcoholic}</p>
         </div>
         <p>
           <strong>Type: </strong> {data.strGlass}
         </p>
-        <p className="drinkDescription">{data.strInstructions}</p>
+        <p className={style.description}>{data.strInstructions}</p>
       </div>
     </div>
   );

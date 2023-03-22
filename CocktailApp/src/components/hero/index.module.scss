@@ -7,14 +7,28 @@
   @include flex_setting(row, space-between, center);
   overflow: hidden;
 
-  .hero_text {
+  .text {
     color: $heroTextColor;
     text-shadow: 2px 1px 1px #01263ae6;
     text-align: center;
     font-size: 2rem;
+    filter: drop-shadow(3px 3px 1px rgba(79, 76, 76, 0.493));
   }
   img {
     width: 250px;
     filter: drop-shadow(13px 13px 1px $shadowBlackAlpha);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Hero {
+    height: 350px;
+    @include flex_setting(row, space-evenly, center, 100px);
+    .text {
+      font-size: 3.5rem;
+    }
+    img {
+      width: 380px;
+    }
   }
 }

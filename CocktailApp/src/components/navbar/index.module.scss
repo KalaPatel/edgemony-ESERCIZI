@@ -8,7 +8,7 @@
   background-color: $mainBGcolor;
   color: $textColor;
   box-shadow: 3px 3px 3px solid $shadowBlackAlpha;
-  .name-logo_container {
+  .name_logoContainer {
     display: flex;
     align-items: center;
     // gap: 5px;
@@ -18,17 +18,7 @@
     }
     h4 {
       font-size: 1.6rem;
-    }
-  }
-
-  ul {
-    font-size: 0.9rem;
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
-    li:hover {
-      text-decoration: underline;
+      filter: drop-shadow(3px 3px 1px rgb(0, 0, 0));
     }
   }
 
@@ -39,5 +29,26 @@
     padding: 5px 0 5px 10px;
     border-radius: 4px;
     margin-right: 10px;
+  }
+
+  .hamburgerIcon {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 1px rgb(0, 0, 0));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Navbar {
+    .name_logoContainer {
+      .logo_img {
+        width: 80px;
+      }
+      h4,
+      .hamburgerIcon {
+        font-size: 3.6rem;
+      }
+    }
   }
 }

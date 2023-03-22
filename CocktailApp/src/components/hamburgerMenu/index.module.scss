@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.HamburgerMenu {
+  width: 130px;
+  position: fixed;
+  //   top: 65px;
+  //   right: 15px;
+  right: -400px;
+  background-color: rgba(255, 255, 255, 0.907);
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.603);
+  ul {
+    padding: 20px;
+    font-size: 0.9rem;
+    list-style: none;
+    // display: flex;
+    // gap: 10px;
+    @include flex_setting(column, center, center, 10px);
+    cursor: pointer;
+
+    li {
+      font-size: 1.3rem;
+      transition: all 0.35s;
+      padding: 5px;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+      box-shadow: 3px 3px 2px rgb(49, 49, 49);
+      background-color: $mainBGcolor;
+      color: $textColor;
+    }
+  }
+}
+
+.show {
+  top: 65px;
+  right: 15px;
+}
