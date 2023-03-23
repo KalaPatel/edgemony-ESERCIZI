@@ -11,6 +11,10 @@ const ReservationModal = ({
   const [hour, setHour] = useState("");
 
   const onHandleCloseModalClick = () => {
+    setReservationModalOpen(() => false);
+  };
+
+  const onHandleClosePopup = () => {
     setReservationData((prev) => ({
       ...prev,
       isVisible: false,
@@ -62,7 +66,7 @@ const ReservationModal = ({
             type="submit"
             value="Book!"
             className={style.submitBtn}
-            onClick={onHandleCloseModalClick}
+            onClick={onHandleClosePopup}
           />
         </form>
       </div>
