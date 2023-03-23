@@ -1,0 +1,39 @@
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
+.Popup {
+  opacity: 0;
+  z-index: 2;
+  background-color: aliceblue;
+  position: fixed;
+  top: 55px;
+  left: calc(50% - 200px);
+  width: 400px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  animation-name: popup;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  color: $mainBGcolor;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

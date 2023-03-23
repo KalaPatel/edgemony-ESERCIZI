@@ -15,8 +15,6 @@ const Navbar = ({ setMenuOpen }) => {
         />
         <h4>KalaKala</h4>
       </div>
-
-      {/* <input type="text" placeholder="Search"></input> */}
       <CgMenuHotdog className={style.hamburgerIcon} onClick={onClickMenuOpen} />
     </div>
   );

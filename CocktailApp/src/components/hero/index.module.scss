@@ -6,13 +6,34 @@
   background-color: $heroBGColor;
   @include flex_setting(row, space-between, center);
   overflow: hidden;
+  position: relative;
 
-  .text {
-    color: $heroTextColor;
-    text-shadow: 2px 1px 1px #01263ae6;
-    text-align: center;
-    font-size: 2rem;
-    filter: drop-shadow(3px 3px 1px rgba(79, 76, 76, 0.493));
+  .heroTextWrapper {
+    @include flex_setting(column, flex-start, center, 20px);
+
+    .text {
+      color: $heroTextColor;
+      text-shadow: 2px 1px 1px #01263ae6;
+      text-align: center;
+      font-size: 2rem;
+      filter: drop-shadow(3px 3px 1px rgba(79, 76, 76, 0.493));
+    }
+    .btn {
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      padding: 5px;
+      background-color: $heroTextColor;
+      font-weight: bold;
+      transition: all 0.35s;
+      color: $textColor;
+      &:hover {
+        text-decoration: underline;
+        box-shadow: 2px 2px 4px rgb(49, 49, 49);
+        background-color: $mainBGcolor;
+        transform: scale(1.1);
+      }
+    }
   }
   img {
     width: 250px;
@@ -24,8 +45,15 @@
   .Hero {
     height: 350px;
     @include flex_setting(row, space-evenly, center, 100px);
-    .text {
-      font-size: 3.5rem;
+
+    .heroTextWrapper {
+      .text {
+        font-size: 3.5rem;
+      }
+      .btn {
+        height: 40px;
+        width: 130px;
+      }
     }
     img {
       width: 380px;

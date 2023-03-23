@@ -6,6 +6,7 @@ const DrinkCard = ({ data, setsingleDrinkModalStatus }) => {
       ...prev,
       isVisible: true,
       data: data,
+      objIndex: data.indexObj,
     }));
   };
 

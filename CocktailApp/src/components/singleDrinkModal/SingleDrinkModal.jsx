@@ -1,8 +1,14 @@
-import { BiArrowBack } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
+import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
 import { ingredientsArray } from "./../utils/func";
 import style from "./index.module.scss";
 
-const SingleDrinkModal = ({ data, setsingleDrinkModalStatus }) => {
+const SingleDrinkModal = ({
+  data,
+  setsingleDrinkModalStatus,
+  filterData,
+  counter,
+}) => {
   const onClickModalClose = () => {
     setsingleDrinkModalStatus((prev) => ({
       ...prev,
@@ -10,15 +16,40 @@ const SingleDrinkModal = ({ data, setsingleDrinkModalStatus }) => {
     }));
   };
 
-  console.log(data.strVideo);
+  const onHandleNextBtn = () => {
+    setsingleDrinkModalStatus((prev) => ({
+      ...prev,
+      data: filterData[prev.objIndex + 1],
+      objIndex: prev.objIndex + 1,
+    }));
+  };
+
+  const onHandleBackBtn = () => {
+    setsingleDrinkModalStatus((prev) => ({
+      ...prev,
+      data: filterData[prev.objIndex - 1],
+      objIndex: prev.objIndex - 1,
+    }));
+  };
 
   return (
     <div className={style.SingleDrinkModal}>
+      <div>
+        {counter > 0 ? (
+          <FaChevronCircleLeft
+            className={style.leftBtn}
+            onClick={onHandleBackBtn}
+          />
+        ) : (
+          <FaChevronCircleLeft className={style.disable} />
+        )}
+      </div>
+
       <div className={style.overlay}>
         <div className={style.firstRow}>
           <div className={style.icons}>
-            <BiArrowBack
-              className={style.arrowIcon}
+            <IoCloseSharp
+              className={style.crossIcon}
               onClick={onClickModalClose}
             />
           </div>
@@ -70,6 +101,17 @@ const SingleDrinkModal = ({ data, setsingleDrinkModalStatus }) => {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div>
+        {counter < filterData.length - 1 ? (
+          <FaChevronCircleRight
+            className={style.rightBtn}
+            onClick={onHandleNextBtn}
+          />
+        ) : (
+          <FaChevronCircleRight opacity="0" />
+        )}
       </div>
     </div>
   );

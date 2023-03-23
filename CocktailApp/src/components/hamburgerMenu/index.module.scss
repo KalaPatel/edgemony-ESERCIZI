@@ -2,10 +2,9 @@
 @import "../../styles/mixins";
 .HamburgerMenu {
   width: 130px;
+  right: 15px;
+  top: 65px;
   position: fixed;
-  //   top: 65px;
-  //   right: 15px;
-  right: -400px;
   background-color: rgba(255, 255, 255, 0.907);
   border-radius: 3px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.603);
@@ -13,8 +12,6 @@
     padding: 20px;
     font-size: 0.9rem;
     list-style: none;
-    // display: flex;
-    // gap: 10px;
     @include flex_setting(column, center, center, 10px);
     cursor: pointer;
 
@@ -22,19 +19,37 @@
       font-size: 1.3rem;
       transition: all 0.35s;
       padding: 5px;
-    }
-
-    li:hover {
-      transform: scale(1.1);
-      text-decoration: underline;
-      box-shadow: 3px 3px 2px rgb(49, 49, 49);
-      background-color: $mainBGcolor;
-      color: $textColor;
+      &:hover {
+        transform: scale(1.1);
+        text-decoration: underline;
+        box-shadow: 3px 3px 2px rgb(49, 49, 49);
+        background-color: $mainBGcolor;
+        color: $textColor;
+      }
     }
   }
 }
 
 .show {
-  top: 65px;
-  right: 15px;
+  animation-name: openMenu;
+  animation-direction: alternate;
+  transition: all 0.55s linear;
+  animation-duration: 1s;
+}
+
+.hide {
+  opacity: 0 !important;
+  animation-name: openMenu;
+  animation-direction: reverse;
+  transition: all 0.55s linear;
+  animation-duration: 1s;
+}
+
+@keyframes openMenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
