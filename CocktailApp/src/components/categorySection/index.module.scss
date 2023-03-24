@@ -6,7 +6,7 @@
   color: $textColor;
   font-weight: $boldText;
   .categoryList {
-    @include flex_setting(row, space-around, flex-start, 18px 20px, wrap);
+    @include flex_setting(row, space-around, flex-start, 18px 55px, wrap);
     padding: 40px;
     cursor: pointer;
     li:hover {

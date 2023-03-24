@@ -16,7 +16,7 @@ const Footer = () => {
       <p>
         <i>PNG by</i>{" "}
         <a className={style.link} href="https://it.cleanpng.com/">
-          Cleanong
+          Cleanpng
         </a>
       </p>
     </div>

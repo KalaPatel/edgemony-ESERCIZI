@@ -89,7 +89,8 @@ function App() {
         <Popup>
           <h3>
             Your reservation, under the name {reservationData.lastName} of the
-            {reservationData.date} at {reservationData.hour} has been confirmed
+            {` ${reservationData.date}`} at {reservationData.hour} has been
+            confirmed
           </h3>
         </Popup>
       )}

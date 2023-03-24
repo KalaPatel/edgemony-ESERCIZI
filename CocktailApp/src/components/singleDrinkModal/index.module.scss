@@ -24,7 +24,6 @@
 
   .overlay {
     position: relative;
-    // border: 2px solid violet;
     height: 650px;
     width: 350px;
     .firstRow {
@@ -89,7 +88,7 @@
         ul {
           overflow-x: auto;
           list-style: none;
-
+          scroll-behavior: smooth;
           @include flex_setting(row, flex-start, flex-start, 5px);
           li {
             width: 120px;
@@ -111,11 +110,11 @@
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: transparent;
+  background-color: $heroBGColor;
   box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.484);
 }
 
 ::-webkit-scrollbar-thumb {
   border-top-right-radius: 2px;
-  background: $textColor;
+  background: $heroTextColor;
 }
