@@ -16,7 +16,7 @@ function App() {
   const [reservationData, setReservationData] = useState({
     isVisible: false,
     lastName: "",
-    date: " ",
+    date: "",
     hour: "",
   });
   const [category, setCategory] = useState("");
@@ -56,10 +56,8 @@ function App() {
             setHeroStyle={setHeroStyle}
           />
           <Content
-            category={category}
             setCardData={setCardData}
             list={list}
-            cardData={cardData}
             setsingleDrinkModalStatus={setsingleDrinkModalStatus}
           />
           <Footer />

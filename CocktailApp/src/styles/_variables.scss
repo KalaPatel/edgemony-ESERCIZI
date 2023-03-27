@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Macondo&family=Rock+Salt&display=swap");
 $mainBGcolor: #031d2be6;
 $textColor: white;
-$shadowBlackAlpha: rgba(26, 3, 3, 0.686);
+$shadowBlack: rgba(26, 3, 3, 0.686);
 $heroTextColor: #2676a1e6;
 $heroBGColor: #dbebf7f0;
 $borderCardColor: rgb(237, 237, 243);
 $minicardTextColor: #053853;
-// #01263ae6;
-// #01334ee6
+$shadowAlpha: rgba(0, 0, 0, 0.647);
+
+//!Font_text
 $mainFont: "Macondo", cursive;
-$paddingvariable: 40px;
 $boldText: bold;
+
+//* Box-model value
+$boxmodelSingleValue: 20px;
+
+//? Animation
+$timeSlow: 1s;
+$timeMedium: 0.5s;
+$timeFast: 0.35s;

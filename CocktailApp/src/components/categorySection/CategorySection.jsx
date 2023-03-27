@@ -1,5 +1,4 @@
 import style from "./index.module.scss";
-
 import { heroDataArr } from "./../../components/utils/func";
 
 const CategorySection = ({ setCategory, setHeroStyle }) => {

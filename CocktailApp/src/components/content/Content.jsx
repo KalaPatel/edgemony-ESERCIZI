@@ -1,12 +1,9 @@
 import DrinkCard from "../drinkCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { GET } from "../utils/http";
-// import { filteredByCategory } from "../utils/func";
 import style from "./index.module.scss";
 
 const Content = ({
-  cardData,
-  category,
   setsingleDrinkModalStatus,
   setIngredientData,
   setCardData,
@@ -16,18 +13,12 @@ const Content = ({
     GET("search.php?f=d").then(({ drinks }) => setCardData(drinks));
   }, []);
 
-  // const list = filteredByCategory(cardData, "strCategory", category);
-  // setCardData((prev) => ({
-  //   ...prev,
-  //   filteredArray: list,
-  // }));
-
   return (
     <div className={style.Content}>
       {list.map((drink, i) => (
         <DrinkCard
+          key={drink.idDrink}
           data={{ ...drink, indexObj: i }}
-          key={drink.id}
           setsingleDrinkModalStatus={setsingleDrinkModalStatus}
           setIngredientData={setIngredientData}
         />

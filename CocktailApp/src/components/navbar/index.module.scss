@@ -1,24 +1,24 @@
-@import "../../styles/variables";
-
 .Navbar {
-  padding: 10px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 20px;
+  @include flex_setting(row, space-between, center);
   background-color: $mainBGcolor;
   color: $textColor;
-  box-shadow: 3px 3px 3px solid $shadowBlackAlpha;
+  box-shadow: 3px 3px 3px solid $shadowBlack;
   .name_logoContainer {
-    display: flex;
-    align-items: center;
-    // gap: 5px;
+    @include flex_setting(row, flex-start, center);
     .logo_img {
       width: 70px;
       filter: drop-shadow(3px 3px 1px $mainBGcolor);
+      @include tablet {
+        width: 80px;
+      }
     }
     h4 {
       font-size: 1.6rem;
       filter: drop-shadow(3px 3px 1px rgb(0, 0, 0));
+      @include tablet {
+        font-size: 3.6rem;
+      }
     }
   }
 
@@ -32,23 +32,12 @@
   }
 
   .hamburgerIcon {
-    color: white;
+    color: $textColor;
     font-size: 2.5rem;
     cursor: pointer;
     filter: drop-shadow(3px 3px 1px rgb(0, 0, 0));
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .Navbar {
-    .name_logoContainer {
-      .logo_img {
-        width: 80px;
-      }
-      h4,
-      .hamburgerIcon {
-        font-size: 3.6rem;
-      }
+    @include tablet {
+      font-size: 3rem;
     }
   }
 }

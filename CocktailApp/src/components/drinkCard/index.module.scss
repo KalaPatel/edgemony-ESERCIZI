@@ -1,5 +1,3 @@
-@import "./../../styles/variables";
-@import "./../../styles/mixins";
 .DrinkCard {
   cursor: pointer;
   position: relative;
@@ -16,23 +14,21 @@
     }
   }
   .infoBox {
-    @include flex_setting(column, flex-start, space-between, 10px);
-    padding: 20px;
     opacity: 0;
     position: absolute;
-    color: #053853;
-    font-weight: $boldText;
-    background-color: $heroBGColor;
-    width: 250px;
-    height: 260px;
     top: 100px;
     left: 20px;
-    transition: opacity 0.55s ease-out;
+    padding: $boxmodelSingleValue;
+    transition: opacity $timeMedium ease-out;
+    color: $minicardTextColor;
+    font-weight: $boldText;
+    background-color: $heroBGColor;
+    @include flex_setting(column, flex-start, space-between, 10px);
+    @include size(250px);
     &:hover {
       opacity: 1;
-      top: 100px;
       border-radius: 6px;
-      box-shadow: 0px 0px 4px $shadowBlackAlpha;
+      box-shadow: 0px 0px 4px $shadowBlack;
       left: 20px;
       overflow-y: auto;
     }

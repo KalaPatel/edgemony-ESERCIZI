@@ -1,13 +1,11 @@
-@import "./../../styles/variables";
-@import "./../../styles/mixins";
-
 .CategorySection {
   background-color: $mainBGcolor;
   color: $textColor;
   font-weight: $boldText;
   .categoryList {
     @include flex_setting(row, space-around, flex-start, 18px 55px, wrap);
-    padding: 40px;
+    padding: $boxmodelSingleValue + 20px;
+
     cursor: pointer;
     li:hover {
       text-decoration: underline;

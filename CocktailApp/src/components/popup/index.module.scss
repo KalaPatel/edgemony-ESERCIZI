@@ -1,19 +1,17 @@
-@import "./../../styles/variables";
-@import "./../../styles/mixins";
 .Popup {
-  opacity: 0;
-  z-index: 2;
-  background-color: aliceblue;
   position: fixed;
   top: 55px;
   left: calc(50% - 200px);
   width: 400px;
-  border-radius: 4px;
+  opacity: 0;
+  z-index: 2;
   text-align: center;
-  padding: 10px;
+  background-color: aliceblue;
+  border-radius: 4px;
+  padding: $boxmodelSingleValue / 2;
   animation-name: popup;
   animation-timing-function: linear;
-  animation-duration: 5s;
+  animation-duration: $timeSlow * 5;
   color: $mainBGcolor;
 }
 
