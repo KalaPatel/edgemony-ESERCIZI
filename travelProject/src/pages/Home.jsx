@@ -14,7 +14,7 @@ function Home() {
           <span>Roma</span>
         </div>
       </Link>
-      <Link to="/city/Roma">
+      <Link to="/activity/sightseeing">
         <div className={styles.actvityCard}>
           <span>SightSeeing</span>
         </div>
