@@ -1,27 +1,22 @@
 .Navbar {
-  height: 100px;
-  border: 2px solid pink;
-  background-color: azure;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  .Name:link,
-  .Name:active,
-  .Name:visited {
-    color: black;
-    text-decoration: none;
-  }
-
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  @include size(100%, 50px);
+  @include flex_setting(space-around, center);
   .listItem {
     list-style-type: none;
-    display: flex;
-    gap: 20px;
+    @include flexGDW(20px);
   }
 
   .link:link,
   .link:active,
   .link:visited {
-    color: black;
+    color: #1b2419;
     text-decoration: none;
   }
 }

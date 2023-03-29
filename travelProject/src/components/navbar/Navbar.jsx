@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <div className={styles.Navbar}>
       <h1 className={styles.Name}>
-        <Link to="/" className={styles.Name}>
-          Name
+        <Link to="/" className={styles.link}>
+          KALAMUNDO
         </Link>
       </h1>
       <ul className={styles.listItem}>

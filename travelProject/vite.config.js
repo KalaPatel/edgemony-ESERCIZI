@@ -7,4 +7,15 @@ export default defineConfig({
   server: {
     host: true,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/styles/_variables.scss"; 
+          @import "./src/styles/_mixins.scss";
+          @import "./src/styles/_resolutions.scss";
+        `,
+      },
+    },
+  },
 });

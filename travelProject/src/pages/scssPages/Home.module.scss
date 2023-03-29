@@ -1,7 +1,24 @@
-.cityCard,
-.actvityCard {
-  display: inline-block;
-  height: 200px;
-  width: 150px;
-  border: 1px solid black;
+.Home {
+  display: flex;
+  justify-content: space-evenly;
+  .cityCard,
+  .actvityCard {
+    margin: 20px;
+    border: 1px solid black;
+    @include flex_setting(center, center);
+    @include size(150px, 170px);
+    background-size: cover;
+  }
+  .cityCard {
+    background-image: url("https://images.unsplash.com/photo-1518005068251-37900150dfca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80");
+  }
+  .actvityCard {
+    background-image: url("https://images.unsplash.com/photo-1611765083444-a3ce30f1c885?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  }
+  span {
+    background-color: white;
+    padding: 20px;
+    font-weight: bold;
+    color: black;
+  }
 }

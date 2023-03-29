@@ -1,25 +1,19 @@
 import styles from "./scssPages/Home.module.scss";
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
-import Hero from "../components/hero/Hero";
-import Footer from "../components/footer";
 
 function Home() {
   return (
     <div className={styles.Home}>
-      <Navbar />
-      <Hero />
-      <Link to="/city/Roma">
-        <div className={styles.cityCard}>
-          <span>Roma</span>
-        </div>
-      </Link>
-      <Link to="/activity/sightseeing">
+      <Link to="/activity">
         <div className={styles.actvityCard}>
-          <span>SightSeeing</span>
+          <span>Activity</span>
         </div>
       </Link>
-      <Footer />
+      <Link to="/city">
+        <div className={styles.cityCard}>
+          <span>City</span>
+        </div>
+      </Link>
     </div>
   );
 }
