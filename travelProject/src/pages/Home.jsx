@@ -9,9 +9,9 @@ function Home() {
           <span>Activity</span>
         </div>
       </Link>
-      <Link to="/city">
+      <Link to="/attraction">
         <div className={styles.cityCard}>
-          <span>City</span>
+          <span>Attraction</span>
         </div>
       </Link>
     </div>

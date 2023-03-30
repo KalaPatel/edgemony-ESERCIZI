@@ -2,34 +2,34 @@ import styles from "./index.module.scss";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { GET } from "../../../utils/https.js";
-import { activitiesMock } from "../../../mock/activitiesMock";
+import { attractionsMock } from "../../../mock/attractionsMock";
 
-export default function SingleActivityPage() {
-  const [activityInfo, setActivityInfo] = useState([]);
+export default function SingleAttractionPage() {
+  const [attractionInfo, setAttractionInfo] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    GET(`activities?$filter=name%20eq%20%27${id}%27`).then((data) => {
+    GET(`attractions?$filter=name%20eq%20%27${id}%27`).then((data) => {
       if (data.statusCode <= 400) {
         console.log("sono la fetch");
-        setActivityInfo(data.results);
+        setAttractionInfo(data.results);
       } else {
-        const filteredActivity = activitiesMock.filter(
+        const filteredActivity = attractionsMock.filter(
           (item) => item.name == `${id}`
         );
-        setActivityInfo(filteredActivity);
+        setAttractionInfo(filteredActivity);
       }
     });
   }, []);
 
   return (
     <>
-      {activityInfo.length > 0 ? (
-        activityInfo.map((item) => (
+      {attractionInfo.length > 0 ? (
+        attractionInfo.map((item) => (
           <div className={styles.wrapper} key={item.name}>
             <h1>{item.name}</h1>
             <img
               src="https://streetviewhub.com/shots"
-              alt={activityInfo.title}
+              alt={attractionInfo.title}
               className={styles.img}
             />
           </div>

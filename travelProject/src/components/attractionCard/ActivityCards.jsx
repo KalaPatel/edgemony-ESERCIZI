@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import { useNavigate } from "react-router-dom";
 
-const ActivityCards = ({ data, index }) => {
+const AttractionCard = ({ data, index }) => {
   const navigate = useNavigate();
 
   const onHandleClick = () => {
@@ -25,4 +25,4 @@ const ActivityCards = ({ data, index }) => {
   );
 };
 
-export default ActivityCards;
+export default AttractionCard;
