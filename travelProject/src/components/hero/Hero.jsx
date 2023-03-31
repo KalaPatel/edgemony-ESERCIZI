@@ -11,8 +11,7 @@ const Hero = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    // navigate(`activity/${valueInput}`) || navigate(`attraction/${valueInput}`);
-    navigate(`activity/${valueInput}`);
+    navigate(`/?search=${valueInput}`);
     setValueInput("");
   };
 

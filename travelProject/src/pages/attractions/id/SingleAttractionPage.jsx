@@ -1,53 +1,30 @@
 import styles from "./index.module.scss";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { GET } from "../../../utils/https.js";
+import { attractionsMock } from "../../../mock/attractionsMock";
 
-import { activitiesMock } from "../../../mock/activitiesMock";
-
-export default function SingleActivityPage() {
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [activityInfo, setActivityInfo] = useState([]);
-  const [dateInput, setDateInput] = useState("");
-  const [timeInput, setTimeInput] = useState("");
-  const [popupVisible, setPopupVisible] = useState(false);
-
-  const onHandleTimeInput = (e) => {
-    setTimeInput(() => e.target.value);
-  };
-
-  const onHandleDateInput = (e) => {
-    setDateInput(() => e.target.value);
-  };
-
-  const onHadleSubmit = (e) => {
-    e.preventDefault();
-    navigate(`?date=${dateInput}&time=${timeInput}`);
-    setPopupVisible(() => true);
-    setTimeInput("");
-    setDateInput("");
-  };
-
+export default function SingleAttractionPage() {
+  const [attractionInfo, setAttractionInfo] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    GET(`activities?$filter=name%20eq%20%27${id}%27`).then((data) => {
+    GET(`attractions?$filter=name%20eq%20%27${id}%27`).then((data) => {
       if (data.statusCode <= 400) {
         console.log("sono la fetch");
-        setActivityInfo(data.results);
+        setAttractionInfo(data.results);
       } else {
-        const filteredActivity = activitiesMock.filter(
+        const filteredActivity = attractionsMock.filter(
           (item) => item.name == `${id}`
         );
-        setActivityInfo(filteredActivity);
+        setAttractionInfo(filteredActivity);
       }
     });
   }, []);
 
   return (
     <>
-      {activityInfo.length > 0 ? (
-        activityInfo.map((item) => (
+      {attractionInfo.length > 0 ? (
+        attractionInfo.map((item) => (
           <div className={styles.wrapper} key={item.name}>
             <h1>{item.name}</h1>
             <div className={styles.container}>
@@ -57,7 +34,7 @@ export default function SingleActivityPage() {
                 className={styles.img}
               />
               <div className={styles.cardInfo}>
-                <h4>Activity type:</h4>
+                <h4>Attraction type:</h4>
                 <ul className={styles.list}>
                   {item["@type"].map((element) => (
                     <li key={element}>- {element}</li>
@@ -84,31 +61,6 @@ export default function SingleActivityPage() {
                   {item.url}
                 </a>
               </div>
-              <form onSubmit={onHadleSubmit}>
-                <input
-                  type="date"
-                  onChange={onHandleDateInput}
-                  value={dateInput}
-                />
-                <input
-                  type="time"
-                  onChange={onHandleTimeInput}
-                  value={timeInput}
-                />
-                <input
-                  type="submit"
-                  value="controlla disponibilità"
-                  className={styles.submitBtn}
-                />
-              </form>
-              {popupVisible && (
-                <p>
-                  {`Il ${item.name} alle ore ${searchParams.get(
-                    "time"
-                  )} il giorno
-                  ${searchParams.get("date")} è disponibile!`}
-                </p>
-              )}
             </div>
             <iframe
               className={styles.googleMap}
@@ -119,6 +71,17 @@ export default function SingleActivityPage() {
       ) : (
         <p>Nessun risultato trovato. Provate ad essere più specifici </p>
       )}
+
+      {/* {activityInfo.length == 0 ? (
+        <p>Nessun risultato trovato. Provate ad essere più specifici </p>
+      ) : null} */}
+
+      {/* <img
+        src={activityInfo.image}
+        alt={activityInfo.title}
+        className={styles.img}
+      />
+      <p>{activityInfo.description} </p> */}
     </>
   );
 }

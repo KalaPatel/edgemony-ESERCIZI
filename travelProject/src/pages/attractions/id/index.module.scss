@@ -1,11 +1,68 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 110px;
   align-items: center;
-  .img {
-    @include size(250px);
-    margin: 20px;
+  @include tablet {
+    margin-bottom: 50px;
+  }
+  .googleMap {
+    @include size(300px, 450px);
+    @include tablet {
+      width: 500px;
+    }
+  }
+
+  .container {
+    .img {
+      @include size(250px);
+      margin: 10px 20px;
+      @include tablet {
+        @include size(380px, 330px);
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    @include tablet {
+      flex-direction: row;
+      gap: 40px;
+    }
+    .cardInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      li {
+        font-size: 0.9rem;
+        @include tablet {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    p {
+      .span {
+        font-weight: bold;
+      }
+    }
+    .contract {
+      @include tablet {
+        font-size: 1.2rem;
+      }
+      font-size: 0.8rem;
+    }
+    a:link,
+    a:visited,
+    a:active {
+      font-style: italic;
+    }
   }
 }

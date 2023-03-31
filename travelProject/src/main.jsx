@@ -10,11 +10,12 @@ import {
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Activity from "./pages/activities/Activity";
-import SingleAttractionPage from "./pages/attractions/id/SingleActivityPage";
+import SingleAttractionPage from "./pages/attractions/id/SingleAttractionPage";
 import Attractions from "./pages/attractions/Attractions";
 import MainLayout from "./layouts/mainLayout/MainLayout";
-import "./index.css";
 import SingleActivityPage from "./pages/activities/id/SingleActivityPage";
+
+import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
