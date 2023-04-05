@@ -17,14 +17,22 @@ export const mainReducer = (state, action) => {
         isModalVisibile: !state.isModalVisibile,
       };
     }
+    case "SET_USERNAME": {
+      return {
+        ...state,
+        newToDoObj: {
+          ...state.newToDoObj,
+          username: action.payload,
+          image: `https://robohash.org/${action.payload}`,
+        },
+      };
+    }
     case "todoText": {
       return {
         ...state,
         newToDoObj: {
-          id: state.tasksListData.length + 1,
+          ...state.newToDoObj,
           todo: action.payload,
-          completed: state.newToDoObj.completed,
-          userId: 1,
         },
       };
     }
@@ -32,31 +40,10 @@ export const mainReducer = (state, action) => {
       return {
         ...state,
         newToDoObj: {
-          id: state.newToDoObj.id,
-          todo: state.newToDoObj.todo,
+          ...state.newToDoObj,
           completed: action.payload,
-          userId: 1,
         },
       };
     }
   }
 };
-
-// export const modalReducer = (state, action) => {
-//   switch (action.type) {
-//     case "SET_MODAL_OPEN": {
-//       return {
-//         ...state,
-//         isModalVisibile: !state.isModalVisibile,
-//       };
-//     }
-//   }
-// };
-
-// Per esercizio avanzato!! (04/04/2023)
-// dispatch({type: 'CREATE_NEW_TASK', payload: {
-//   "id": 31,
-//   "todo": "Do something nice for someone I care about",
-//   "completed": true,
-//   "userId": 26
-// }})
