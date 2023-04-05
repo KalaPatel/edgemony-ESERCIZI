@@ -22,6 +22,7 @@ const NewTaskModal = () => {
     dispatch({ type: "SET_MODAL_OPEN" });
     dispatch({ type: "completed", payload: false });
     dispatch({ type: "todoText", payload: "" });
+    dispatch({ type: "SET_USERNAME", payload: "" });
   };
 
   return (

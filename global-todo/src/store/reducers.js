@@ -22,6 +22,7 @@ export const mainReducer = (state, action) => {
         ...state,
         newToDoObj: {
           ...state.newToDoObj,
+          id: state.tasksListData.length + 1,
           username: action.payload,
           image: `https://robohash.org/${action.payload}`,
         },

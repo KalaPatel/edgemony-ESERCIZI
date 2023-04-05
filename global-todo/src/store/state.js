@@ -212,7 +212,7 @@ export const initialState = {
     },
   ],
   newToDoObj: {
-    id: this.tasksListData.length + 1,
+    id: null,
     todo: "",
     completed: false,
     image: "",
